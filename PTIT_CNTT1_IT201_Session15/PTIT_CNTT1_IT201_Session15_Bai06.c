@@ -5,7 +5,7 @@
 #include<stdbool.h>
 #define MAX 100
 typedef struct Queue {
-   char customers[MAX][30];
+   char customers[MAX][31];
    int front;
    int rear;
    int cap;
@@ -67,9 +67,9 @@ int main(){
       switch (choice) {
          case 1:
             getchar();
-            char name[30];
+            char name[31];
             printf("\nMoi nhap ten khach hang:");
-            fgets(name, 30, stdin);
+            fgets(name, 31, stdin);
             name[strcspn(name,"\n")] = 0;
             enQueue(queue, name);
             break;
